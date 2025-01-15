@@ -44,10 +44,22 @@ function stopWatch() {
         if (second < 10) { 
             secString = "0" + secString; 
         } 
-  
-  
+        
         document.getElementById('min').innerHTML = minString; 
         document.getElementById('sec').innerHTML = secString; 
-        setTimeout(stopWatch, 250); 
+
+        if ((parseInt(document.querySelector("#min").innerText) == 30) && (parseInt(document.querySelector("#sec").innerText) == 0)){
+            stopBtn()
+            heaterdone.style.opacity="100%"
+            heaterstatus="done"
+            // messcounter=12
+            // update()
+            if(f==25){
+                messcounter=12
+                update()
+            }
+        }
+  
+        setTimeout(stopWatch, 30); 
     } 
 }

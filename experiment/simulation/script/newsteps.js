@@ -29,6 +29,8 @@ var ptext = document.querySelector("#ptext")
 var phvari
 var phvari2
 
+var heaterstatus = "notdone"
+
 
 
 function phenolph(){
@@ -36,6 +38,7 @@ function phenolph(){
         f=12
         pc.style.top="20%"
         setTimeout(function(){
+            drop.style.transitionDuration="1s"
             pc.style.left="42.5%"
             drop.style.left="43.3%"
             drop.style.top="53%"
@@ -163,7 +166,7 @@ function oilflask(){
             },1000)
         },1000)
     }
-    else if(f==25){
+    else if(f==25 && heaterstatus=="done"){
         f=26
         kohoil.style.top="15%"
         setTimeout(function(){
@@ -199,13 +202,15 @@ function nob(){
             watch.style.visibility="visible"
             resetBtn()
             startBtn()
-            setTimeout(function(){
-                stopBtn()
-                heaterdone.style.opacity="100%"
-                f=25
-                messcounter=12
-                update()
-            },470000)
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // setTimeout(function(){
+            //     stopBtn()
+            //     heaterdone.style.opacity="100%"
+            //     f=25
+            //     messcounter=12
+            //     update()
+            // },470000)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         },1000)
         f=9
     }
@@ -224,6 +229,8 @@ function popuphider(){
 function hcl(){
     if (f==9){
         f=10
+        funnel.style.transitionDuration="1s"
+        hclhalf.style.transitionDuration="1s"
         eburette.style.scale="0.8"
         burette.style.scale="0.8"
         eburette.style.top="12%"

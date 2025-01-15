@@ -8,14 +8,14 @@ var hmessage=["प्रयोग शुरू करने के लिए स
     "KOH फ्लास्क में फिनोलफ्थलीन इंडिकेटर की कुछ बूंदें डालें",
     "अब फ्लास्क को ब्यूरेट के नीचे रखें",
     "ब्यूरेट नोब पर तब तक क्लिक करें जब तक आपको घोल का पारदर्शी रंग न मिल जाए",
-    "यह जानने के लिए ब्यूरेट में दिखाई गई रीडिंग को नोट करें कि 15ml 0.5(N) KOH घोल को टाइट्रेट करने के लिए कितना HCL घोल इस्तेमाल किया गया है",
+    "यह जानने के लिए ब्यूरेट में दिखाई गई रीडिंग को नोट करें कि 15ml 0.5(M) KOH घोल को टाइट्रेट करने के लिए कितना HCL घोल इस्तेमाल किया गया है",
     "फ्लास्क पर क्लिक करके उसे उसकी मूल स्थिति में रखें",
     "30 मिनट पूरे होने तक प्रतीक्षा करें",
     "oil sample को हीट मशीन से उठाने के लिए उस पर क्लिक करें",
     "फ़िनोल्फ़थेलीन की कुछ बूँदें जोड़ें",
     "फ्लास्क को ब्यूरेट के नीचे रखें",
     "ब्यूरेट नोब पर तब तक क्लिक करें जब तक आपको घोल का पारदर्शी रंग न मिल जाए",
-    "यह जानने के लिए ब्यूरेट में दिखाए गए रीडिंग को फिर से नोट करें कि 15ml 0.5(N) KOH घोल के साथ oil को टाइट्रेट करने के लिए कितना HCL घोल उपयोग किया गया है",
+    "यह जानने के लिए ब्यूरेट में दिखाए गए रीडिंग को फिर से नोट करें कि 15ml 0.5(M) KOH घोल के साथ oil को टाइट्रेट करने के लिए कितना HCL घोल उपयोग किया गया है",
     "फ्लास्क पर क्लिक करके उसे उसकी मूल स्थिति में रखें",
     "सटीक परिणाम प्राप्त करने के लिए इस प्रक्रिया को दो बार और दोहराएं",
     "Observations देखने के लिए Observations बटन दबाएँ",
@@ -31,14 +31,14 @@ var message=["Press start button to start the experiment",
     "add some drops of phenolphthlein indicator in KOH flask",
     "now put flask under the burette",
     "click on burette nob until you get the transparent colour of the solution",
-    "note down the reading shown in the burette to know how much solution is used to titrate 15ml of 0.5(N) KOH solution",
+    "note down the reading shown in the burette to know how much solution is used to titrate 15ml of 0.5(M) KOH solution",
     "put flask at their original postion by clicking on it",
     "wait to complete 30 minutes",
     "click on the oil sample to raise it from the heat machine",
     "add some drops of phenolphthalien",
     "put the flask under the burette",
     "click on burette nob until you get the transparent colour of the solution",
-    "again note down the reading shown in the burette to know how much solution is used to titrate oil with 15ml of 0.5(N) KOH solution",
+    "again note down the reading shown in the burette to know how much solution is used to titrate oil with 15ml of 0.5(M) KOH solution",
     "put flask at their original postion by clicking on it",
     "repeat this process two more times to get accurate results",
     "to see observations press observations button",
@@ -82,6 +82,7 @@ function start(){
     else if(f==2000){
         tablesdiv.style.visibility="visible"
         f=3000
+        mes.innerText="Congratulations! You have completed the experiment successfully."
     }
 }
 

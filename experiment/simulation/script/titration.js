@@ -33,15 +33,21 @@ function flask1(){
         t=10
         messcounter=8
         update()
+        clicker.style.opacity="100%"
+        clicker.style.animationIterationCount="infinite"
     }
     else if(f==21){
         // console.log(f)
-        f=22
+        f=25
         koh15.style.left="50%"
         koh15.style.scale="1"
         koh15.style.top="50%"
         messcounter=11
         update()
+        if(heaterstatus=="done"){
+            messcounter=12
+            update()
+        }
         // setTimeout(function(){
         //     messcounter=12
         //     update()
@@ -72,6 +78,8 @@ function flask2(){
         t=2
         messcounter=15
         update()
+        clicker.style.opacity="100%"
+        clicker.style.animationIterationCount="infinite"
     }
     else if(f==39){
         // console.log(f)
@@ -80,6 +88,7 @@ function flask2(){
         kohoil.style.scale="1"
         kohoil.style.top="50%"
         startbutton.style.visibility="visible"
+        startbutton.innerText="Repeat"
         // console.log(trial)
         messcounter=18
         trial1()
@@ -95,6 +104,8 @@ function flask2(){
 function titrate(){
     if(t==10){
         if(f!=20){
+            clicker.style.opacity="0%"
+            clicker.style.animationIterationCount="0"
             drop.style.transitionDuration="1s"
             drop.style.visibility="visible"
             f+=1
@@ -122,13 +133,13 @@ function titrate(){
                 setTimeout(function(){
                     phvari.style.visibility="hidden"
                     burette.style.visibility="hidden"
-                    ptext.innerText="Note down the burette reading to see how much 0.5(N) HCL solution used to titrate 15ml KOH solution"
+                    ptext.innerText="Note down the burette reading to see how much 0.5(M) HCL solution used to titrate 15ml KOH solution"
                     popuphider()
-                    f=21
                     t=11
                     messcounter=9
                     update()
                     setTimeout(function(){
+                        f=21
                         messcounter=10
                         update()
                     },15000)
@@ -143,6 +154,8 @@ function titrate(){
 
     else if(t==2){
         if(f!=38){
+            clicker.style.opacity="0%"
+            clicker.style.animationIterationCount="0"
             // console.log(f)
             drop.style.transitionDuration="1s"
             drop.style.visibility="visible"
@@ -171,13 +184,13 @@ function titrate(){
                 setTimeout(function(){
                     kohoilp.style.visibility="hidden"
                     b20.style.visibility="hidden"
-                    ptext.innerText="Note down the burette reading again to see how much 0.5(N) HCL solution used to titrate oil with 15ml KOH solution"
+                    ptext.innerText="Note down the burette reading again to see how much 0.5(M) HCL solution used to titrate oil with 15ml KOH solution"
                     popuphider()
-                    f=39
                     t=4
                     messcounter=16
                     update()
                     setTimeout(function(){
+                        f=39
                         messcounter=17
                         update()
                     },15000)
@@ -196,10 +209,12 @@ function titrate(){
 function trial1(){
     if(trial=="1st"){
         trial="2nd"
+        heaterstatus="notdone"
     }
     else if(trial=="2nd"){
         trial="3rd"
         messcounter=20
+        heaterstatus="notdone"
     }
     else if(trial=="3rd"){
         trial="end"
